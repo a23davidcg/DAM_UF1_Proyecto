@@ -5,7 +5,7 @@ plugins {
 
 android {
     namespace = "com.example.uf1_proyecto"
-    compileSdk = 33
+    compileSdk = 34
 
     defaultConfig {
         applicationId = "com.example.uf1_proyecto"
@@ -33,11 +33,15 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
+    buildFeatures{
+        viewBinding = true
+    }
 }
 
 dependencies {
 
     implementation("androidx.core:core-ktx:1.9.0")
+    implementation("androidx.navigation:navigation-fragment-ktx:2.7.5") //añadimos dependecnias
     implementation("androidx.appcompat:appcompat:1.6.1")
     implementation("com.google.android.material:material:1.10.0")
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
